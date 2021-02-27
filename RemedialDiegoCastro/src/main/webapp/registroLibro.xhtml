@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+	<h1>Registro de Libros</h1>
+	<h:form>
+	
+		<h:panelGrid columns="5">
+		
+			<h:outputLabel for="txtID" value="id" />
+			<h:inputText id="txtID" value="#{librosBean.newLibro.id}" />
+			<h:message for="txtID"/>
+			
+			<h:outputLabel for="txtTitulo" value="Titulo" />
+			<h:inputText id="txtTitulo" value="#{librosBean.newLibro.titulo}" />
+			<h:message for="txtTitulo"/>
+			
+			<h:outputLabel for="txtStock" value="Stock" />
+			<h:inputText id="txtStock" value="#{librosBean.newLibro.stock}" />
+			<h:message for="txtStock" />
+			
+			<h:outputLabel for="txtCategoria" value="Categoria" />
+			<h:inputText id="txtCategoria" value="#{librosBean.newLibro.categoria}" />
+			<h:message for="txtCategoria" />
+			
+			<h:outputLabel for="txtAutor" value="Autor" />
+			<h:inputText id="txtAutor" value="#{librosBean.newLibro.autor}" />
+			<h:message for="txtAutor" />
+			
+			<h:commandButton action="#{librosBean.doGuardar()}" value="Guardar" />
+		
+		</h:panelGrid>
+	
+	</h:form>
+</body> 
+</html>
