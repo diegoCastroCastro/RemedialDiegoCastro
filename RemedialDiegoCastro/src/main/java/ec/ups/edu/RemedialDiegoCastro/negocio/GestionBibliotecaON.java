@@ -17,7 +17,7 @@ import ec.ups.edu.RemedialDiegoCastro.modelo.Libro;
 
 
 @Stateless
-public class GestionBibliotecaON {
+public class GestionBibliotecaON implements GestionBibliotecaONLocal {
 	
 	@Inject
 	private AutorDAO daoAutor;

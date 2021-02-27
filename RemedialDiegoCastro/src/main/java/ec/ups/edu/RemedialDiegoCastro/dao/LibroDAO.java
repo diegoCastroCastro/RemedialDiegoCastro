@@ -37,7 +37,7 @@ public class LibroDAO {
 	}
 	
 	public List<Libro> getList(){
-		String jpql = "SELECT v FROM Ticket v";
+		String jpql = "SELECT v FROM Libro v";
 		Query q = em.createQuery(jpql, Libro.class);
 		return q.getResultList();
 	}

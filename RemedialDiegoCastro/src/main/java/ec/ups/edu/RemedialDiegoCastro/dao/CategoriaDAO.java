@@ -37,7 +37,7 @@ public class CategoriaDAO {
 	}
 	
 	public List<Categoria> getList(){
-		String jpql = "SELECT v FROM Ticket v";
+		String jpql = "SELECT v FROM Categoria v";
 		Query q = em.createQuery(jpql, Categoria.class);
 		return q.getResultList();
 	}
