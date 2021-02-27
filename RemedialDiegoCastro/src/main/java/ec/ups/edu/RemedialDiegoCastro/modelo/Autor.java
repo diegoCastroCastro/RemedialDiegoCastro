@@ -1,9 +1,12 @@
 package ec.ups.edu.RemedialDiegoCastro.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Autor {
@@ -11,7 +14,8 @@ public class Autor {
 	@Id
 	private int id;
 	private String nombreAutor;
-	private List<Autor> listautor;
+	@OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
+	private List<Libro> libros = new ArrayList<Libro>();
 	
 	public int getId() {
 		return id;
@@ -25,15 +29,5 @@ public class Autor {
 	public void setNombreAutor(String nombreAutor) {
 		this.nombreAutor = nombreAutor;
 	}
-	public List<Autor> getListautor() {
-		return listautor;
-	}
-	public void setListautor(List<Autor> listautor) {
-		this.listautor = listautor;
-	}
-	
-	
-	
-	
 	
 }
